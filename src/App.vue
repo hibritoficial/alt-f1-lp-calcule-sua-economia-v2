@@ -1,11 +1,13 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <NavBar />
+      <Home />
     </v-main>
   </v-app>
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import Home from '@/components/Home.vue'
+  import NavBar from '@/components/NavBar.vue'
 </script>
