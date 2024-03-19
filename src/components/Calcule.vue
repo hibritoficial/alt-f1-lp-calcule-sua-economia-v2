@@ -1,8 +1,9 @@
 <template>
     <v-row class="mx-0 px-0 bg-primary pt-16 pb-16">
-        <v-col cols="12" sm="6">
-            <h1 class="text-sm-h4 font-weight-bold pl-4">Cansado de pagar conta de energia?</h1>
-            <h3 class="text-secondary font-weight-light text-sm-h5 pl-4 px-3"><span class="font-weight-bold">Calcule sua
+        <v-col cols="12" sm="6" md="6">
+            <h1 class="text-sm-h4 font-weight-bold pl-4 text-md-h2">Cansado de pagar conta de energia?</h1>
+            <h3 class="text-secondary font-weight-light text-sm-h5 pl-4 px-3" :class="smAndDown ? '' : 'mt-3'"><span
+                    class="font-weight-bold">Calcule sua
                     economia
                     de
                     dinheiro</span> em energia elétrica</h3>
@@ -25,7 +26,7 @@
                                 hint="Seu whatsapp"></v-text-field>
                         </v-col>
 
-                        <v-col cols="12" sm="12" align="center">
+                        <v-col cols="12" sm="12" align="center" :class="smAndDown ? '' : 'mt-16'">
                             <v-btn class="rounded-pill mb-2 bg-secondary w-100 h-100 text-sm-h6 font-weight-bold">
                                 CALCULAR MINHA ECONOMIA
                             </v-btn>
@@ -47,6 +48,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useDisplay } from 'vuetify';
+
+const { smAndDown } = useDisplay()
 
 const valid = ref(false);
 
